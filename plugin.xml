@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.biffnstein.cordova.eventlist"
+    version="0.0.1">
+    
+    <name>EventList</name>
+    <description>A Cordova plugin for retrieving events from the calendar.</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,eventlist,calendar events,calendar list</keywords>
+
+    <engines>
+            <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/eventlist.js" name="eventlist">
+        <clobbers target="window.EventList" />
+    </js-module>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="EventList">
+                <param name="android-package" value="com.biffnstein.cordova.eventlist.EventList" />
+            </feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_CALENDAR" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+        </config-file>
+        
+        <source-file src="src/android/EventList.java" target-dir="src/com/biffnstein/cordova/eventlist" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="EventList">
+                <param name="ios-package" value="CDVEventList" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/CDVEventList.h" />
+        <source-file src="src/ios/CDVEventList.m" />
+        
+        <framework src="AddressBook.framework" />
+        <framework src="AddressBookUI.framework" />
+    </platform>
+
+</plugin>
