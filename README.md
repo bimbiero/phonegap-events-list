@@ -2,7 +2,15 @@ EventList
 ======
 
 > The `EventList` object provides functions to retrieve calendar events from iOS and Android.
- 
+
+Installation
+============
+
+Install this plugin using PhoneGap/Cordova CLI (iOS and Android)
+
+    cordova plugin add https://github.com/bimbiero/phonegap-events-list.git
+
+
 Methods
 -------
 
@@ -11,7 +19,7 @@ Methods
 EventList.findByDateRange
 =================
 
-    StatusBar.overlaysWebView(startDate, endDate, successCallback, errorCallback);
+    EventList.findByDateRange(startDate, endDate, successCallback, errorCallback);
 
 Description
 -----------
