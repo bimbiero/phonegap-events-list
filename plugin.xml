@@ -45,8 +45,8 @@
         <header-file src="src/ios/CDVEventList.h" />
         <source-file src="src/ios/CDVEventList.m" />
         
-        <framework src="AddressBook.framework" />
-        <framework src="AddressBookUI.framework" />
+        <framework src="EventKit.framework" />
+        <framework src="EventKitUI.framework" />
     </platform>
 
 </plugin>
