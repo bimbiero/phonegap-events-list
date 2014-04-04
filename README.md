@@ -36,7 +36,7 @@ Supported Platforms
 Quick Example
 -------------
 
-    EventList.findByDateRange('', '', function() {}, function() {});
+    EventList.findByDateRange('2014-04-07', '2014-04-14', function() {}, function() {});
 
 
 
