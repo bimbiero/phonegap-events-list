@@ -1,4 +1,3 @@
-cordova.define("com.biffnstein.cordova.eventlist.eventlist", function(require, exports, module) {
 var EventList = function() {
   
 };
@@ -8,5 +7,3 @@ EventList.prototype.findByDateRange = function(startDate, endDate, successCallba
 }
 
 module.exports = new EventList();
-
-});
